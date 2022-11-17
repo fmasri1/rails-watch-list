@@ -1,6 +1,6 @@
 <div class="position-relative">
   <div class="card-category card-large py-5 shadow-lg rounded text-white" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-  url('<%= cl_image_path(@list.photo.key) %>')">
+  url('<%= @list.photo.attached? ? cl_image_path(@list.photo.key) : image_path('default.jpg') %>')">
     <h1> <%= @list.name.capitalize %> </h1>
   </div>
 
